@@ -2,15 +2,15 @@ var namespace = "http://www.w3.org/2000/svg"
 var currentStamp = 1
 
 function stamp1(x, y) {
-  makeImage("../img/sunny1.png",x,y, 45, 35, 1)
+  makeImage(`../img/${weather}1.png`,x,y, 45, 35, 1)
 }
 
 function stamp2(x, y) {
-  makeImage("../img/sunny2.png",x,y, 45, 35, 1)
+  makeImage(`../img/${weather}2.png`,x,y, 45, 35, 1)
 }
 
 function stamp3(x, y) {
-    makeImage("../img/sunny3.png",x,y, 45, 35, 1)
+    makeImage(`../img/${weather}3.png`,x,y, 45, 35, 1)
   }
 
 
@@ -29,18 +29,18 @@ function stamp(event) {
   if (currentStamp == 1) {
 stamp1(xCoord, yCoord)
     currentStamp++
-    document.querySelector('.cursor').style.backgroundImage = `url('../img/sunny2.png')`
+    document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}2.png')`
 
   } else if (currentStamp == 2) {
     // CALL your second function here, passing in xCoord and yCoord for the parameters!
     stamp2(xCoord, yCoord)
     currentStamp++
-    document.querySelector('.cursor').style.backgroundImage = `url('../img/sunny3.png')`
+    document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}3.png')`
 
   } else {
     stamp3(xCoord, yCoord)
     currentStamp = 1
-    document.querySelector('.cursor').style.backgroundImage = `url('../img/sunny1.png')`
+    document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
 
   }
 
@@ -171,3 +171,42 @@ const cursor = (e) => {
   mouseCursor.style.top = e.pageY + "px";
 }
 window.addEventListener("mousemove", cursor);
+
+
+const API_KEY = '87dea9975e241adfef4372a94214a817';
+let weather
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    navigator.geolocation.getCurrentPosition(success);
+});
+
+const success = (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+  
+    getWeather(latitude, longitude);
+  };
+
+
+
+
+
+  const getWeather = (lat, lon) => {
+    fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=kr`
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((json) => {
+        const temperature = json.main.temp;
+        const place = json.name;
+        weather = json.weather[0].main;
+        document.querySelector('.longitude').innerText = place;
+        // descSection.innerText = description;
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }
