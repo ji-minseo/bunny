@@ -221,7 +221,7 @@ const success = (position) => {
         document.querySelector('.longitude').innerText = place +' '+ lat +' '+ lon;
         // descSection.innerText = description;
         document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
-
+        makeDesc()
         showPage()
 
       })
@@ -232,4 +232,12 @@ const success = (position) => {
 
   function showPage() {
     document.querySelector(".video-loader").style.display = "none";
+  }
+
+  function makeDesc() {
+    const clouds = 'cloudy: full of or overcast by clouds: a cloudy sky. having little or no sunshine: a cloudy but rainless day.'
+    document.querySelectorAll('.marquee span').forEach((el) => {
+        if(weather == 'Clouds') el.innerHTML = clouds
+    })
+
   }
