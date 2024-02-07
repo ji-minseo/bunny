@@ -215,6 +215,8 @@ const success = (position) => {
       .then((json) => {
         const temperature = json.main.temp;
         const place = json.name;
+
+        //Rain, Snow, Clouds, Thunderstorm, Drizzle, Atmosphere, Clear
         weather = json.weather[0].main;
         document.querySelector('.longitude').innerText = place +' '+ lat +' '+ lon;
         // descSection.innerText = description;
