@@ -74,6 +74,8 @@ html {
   justify-content: space-between;
   bottom: 0.9375rem;
   align-items: flex-end;
+  font-size: max(1.5625vw, 15px);
+  word-break: keep-all;
 }
 .contents .calendar {
   display: flex;

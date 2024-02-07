@@ -81,6 +81,8 @@ html {
     justify-content: space-between;
     bottom: $margin;
     align-items: flex-end;
+    font-size: max(toVw(30px), 15px);
+    word-break: keep-all;
 
     .calendar {
         display: flex;

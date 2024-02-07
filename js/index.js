@@ -179,6 +179,10 @@ let weather
 
 window.addEventListener('DOMContentLoaded', () => {
     navigator.geolocation.getCurrentPosition(success);
+
+
+    let today = new Date();   
+    document.querySelector('.latitude').innerHTML = today
 });
 
 const success = (position) => {
@@ -203,7 +207,7 @@ const success = (position) => {
         const temperature = json.main.temp;
         const place = json.name;
         weather = json.weather[0].main;
-        document.querySelector('.longitude').innerText = place;
+        document.querySelector('.longitude').innerText = place +' '+ lat +' '+ lon;
         // descSection.innerText = description;
         document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
 
