@@ -205,6 +205,8 @@ const success = (position) => {
         weather = json.weather[0].main;
         document.querySelector('.longitude').innerText = place;
         // descSection.innerText = description;
+        document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
+
       })
       .catch((error) => {
         alert(error);
