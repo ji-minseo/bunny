@@ -59,6 +59,10 @@ html {
     align-items: center;
     justify-content: flex-start;
     font-size: 2rem;
+    @media screen and (max-width : $breakpoint-mobile) {
+        top: 60px;
+
+        }
     h1, h2 {
         font-weight: 400;
         text-align: center;
@@ -276,13 +280,14 @@ svg {
     top: 0;
     background-color: #000;
     color: #fff;
-    font-size: toVw(20px);
+    font-size: max(toVw(20px), 20px);
     line-height: 1.5;
-    height: toVw(40px);
+    height: max(toVw(40px), 40px);
     width: 100vw;
         .inner {
             // text-transform: uppercase;
             @include flex();
+            justify-content: flex-start;
             gap: toVw(100px);
             position: fixed;
               top: toVw(5px);
@@ -293,7 +298,7 @@ svg {
                     animation: marquee 25s linear infinite;
                     @media screen and (max-width : $breakpoint-mobile) {
                     //   top: 104px;
-                      width: 400vw;
+                      width: 1000vw;
                       animation: marquee-m 25s linear infinite;
 
                     }
@@ -301,6 +306,13 @@ svg {
             span {
                 width: 100vw;
                 display: inline-block;
+                text-align: left;
+                @media screen and (max-width : $breakpoint-mobile) {
+                    //   top: 104px;
+                      width: 500vw;
+
+                    }
+
             }
         }
     }
@@ -325,18 +337,18 @@ svg {
 
 @keyframes marquee-m {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(0vw);
   }
   100% {
-    transform: translateX(-100vw);
+    transform: translateX(-500vw);
   }
 }
 
 @keyframes marquee-m-r {
   0% {
-    transform: translateX(-100vw);
+    transform: translateX(-250vw);
   }
   100% {
-    transform: translateX(100vw);
+    transform: translateX(250vw);
   }
 }

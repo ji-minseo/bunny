@@ -54,6 +54,11 @@ html {
   justify-content: flex-start;
   font-size: 2rem;
 }
+@media screen and (max-width: 767px) {
+  .title {
+    top: 60px;
+  }
+}
 .title h1, .title h2 {
   font-weight: 400;
   text-align: center;
@@ -263,15 +268,16 @@ svg {
   top: 0;
   background-color: #000;
   color: #fff;
-  font-size: 1.0416666667vw;
+  font-size: max(1.0416666667vw, 20px);
   line-height: 1.5;
-  height: 2.0833333333vw;
+  height: max(2.0833333333vw, 40px);
   width: 100vw;
 }
 .marquee .inner {
   display: flex;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
   gap: 5.2083333333vw;
   position: fixed;
   top: 0.2604166667vw;
@@ -283,13 +289,19 @@ svg {
 }
 @media screen and (max-width: 767px) {
   .marquee .inner {
-    width: 400vw;
+    width: 1000vw;
     animation: marquee-m 25s linear infinite;
   }
 }
 .marquee .inner span {
   width: 100vw;
   display: inline-block;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .marquee .inner span {
+    width: 500vw;
+  }
 }
 
 @keyframes marquee {
@@ -310,17 +322,17 @@ svg {
 }
 @keyframes marquee-m {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(0vw);
   }
   100% {
-    transform: translateX(-100vw);
+    transform: translateX(-500vw);
   }
 }
 @keyframes marquee-m-r {
   0% {
-    transform: translateX(-100vw);
+    transform: translateX(-250vw);
   }
   100% {
-    transform: translateX(100vw);
+    transform: translateX(250vw);
   }
 }/*# sourceMappingURL=style.css.map */

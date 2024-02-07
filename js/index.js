@@ -235,7 +235,7 @@ const success = (position) => {
   }
 
   function makeDesc() {
-    const clouds = 'cloudy: full of or overcast by clouds: a cloudy sky. having little or no sunshine: a cloudy but rainless day.'
+    const clouds = `When the sky is cloudy, it's so full of clouds that you can't see the sun. A cloudy day isn't ideal for a trip to the beach, and a cloudy night isn't great for star gazing.`
     document.querySelectorAll('.marquee span').forEach((el) => {
         if(weather == 'Clouds') el.innerHTML = clouds
     })
