@@ -8,20 +8,41 @@ window.mobileCheck = function() {
 
 function stamp1(x, y) {
   
-  if(window.mobileCheck()) makeImage(`../img/${weather}1.png`,x,y, 200, 200, 1)
-  else makeImage(`../img/${weather}1.png`,x,y, 60, 60, 1)
+  if(window.mobileCheck()) makeImage(`../img/${weather}1.png`,x,y, 300, 300, 1)
+  else makeImage(`../img/${weather}1.png`,x,y, 100, 100, 1)
 }
 
 function stamp2(x, y) {
-    if(window.mobileCheck()) makeImage(`../img/${weather}2.png`,x,y, 200, 200, 1)
-    else makeImage(`../img/${weather}2.png`,x,y, 60, 60, 1)
+    if(window.mobileCheck()) makeImage(`../img/${weather}2.png`,x,y, 300, 300, 1)
+    else makeImage(`../img/${weather}2.png`,x,y, 100, 100, 1)
 }
 
 function stamp3(x, y) {
-    if(window.mobileCheck()) makeImage(`../img/${weather}3.png`,x,y, 200, 200, 1)
-    else makeImage(`../img/${weather}3.png`,x,y, 60, 60, 1)
+    if(window.mobileCheck()) makeImage(`../img/${weather}3.png`,x,y, 300, 300, 1)
+    else makeImage(`../img/${weather}3.png`,x,y, 100, 100, 1)
   }
 
+  function stamp4(x, y) {
+  
+    if(window.mobileCheck()) makeImage(`../img/${weather}4.png`,x,y, 300, 300, 1)
+    else makeImage(`../img/${weather}4.png`,x,y, 100, 100, 1)
+  }
+  
+  function stamp5(x, y) {
+      if(window.mobileCheck()) makeImage(`../img/${weather}5.png`,x,y, 300, 300, 1)
+      else makeImage(`../img/${weather}5.png`,x,y, 100, 100, 1)
+  }
+  
+  function stamp6(x, y) {
+      if(window.mobileCheck()) makeImage(`../img/${weather}6.png`,x,y, 300, 300, 1)
+      else makeImage(`../img/${weather}6.png`,x,y, 100, 100, 1)
+    }
+
+     
+  function stamp7(x, y) {
+    if(window.mobileCheck()) makeImage(`../img/${weather}7.png`,x,y, 300, 300, 1)
+    else makeImage(`../img/${weather}7.png`,x,y, 100, 100, 1)
+  }
 
 // This function is called whenever the mouse is clicked on the canvas.
 // It figures out the x and y coordinates of where the mouse was clicked, and stores them in the variables xCoord and yCoord.
@@ -45,9 +66,38 @@ stamp1(xCoord, yCoord)
     stamp2(xCoord, yCoord)
     currentStamp++
     document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}3.png')`
+  }
 
-  } else {
-    stamp3(xCoord, yCoord)
+    else if (currentStamp == 3) {
+      // CALL your second function here, passing in xCoord and yCoord for the parameters!
+      stamp3(xCoord, yCoord)
+      currentStamp++
+      document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}4.png')`
+  
+    }
+    else if (currentStamp == 4) {
+      // CALL your second function here, passing in xCoord and yCoord for the parameters!
+      stamp4(xCoord, yCoord)
+      currentStamp++
+      document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}5.png')`
+  
+    }
+    else if (currentStamp == 5) {
+      // CALL your second function here, passing in xCoord and yCoord for the parameters!
+      stamp5(xCoord, yCoord)
+      currentStamp++
+      document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}6.png')`
+  
+    }
+    else if (currentStamp == 6) {
+      // CALL your second function here, passing in xCoord and yCoord for the parameters!
+      stamp6(xCoord, yCoord)
+      currentStamp++
+      document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}7.png')`
+  
+    }
+  else {
+    stamp7(xCoord, yCoord)
     currentStamp = 1
     document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
 
