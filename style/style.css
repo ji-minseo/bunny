@@ -45,6 +45,11 @@ html {
   width: 100%;
   padding: 0 0.9375rem;
 }
+@media screen and (max-width: 767px) {
+  .title, .contents {
+    padding: 0 10px;
+  }
+}
 
 .title {
   top: 3.125vw;
