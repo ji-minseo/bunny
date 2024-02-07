@@ -165,7 +165,8 @@ function makeImage(url, x, y, width, height, opacity) {
   image.setAttribute("width", width)
   image.setAttribute("height", height)
   image.setAttribute("opacity", opacity)
-  
+//   image.translate(x,y)
+//   image.rotate(Math.floor(Math.random() * 20) + -21)
   var canvas = document.getElementById("canvas")
   canvas.appendChild(image)
   return image

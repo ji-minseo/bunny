@@ -211,6 +211,21 @@ svg {
   width: 100vw;
   height: 100vh;
 }
+#canvas image {
+  transform-origin: center center;
+}
+#canvas image:first-of-type {
+  transform: rotateZ(20deg);
+}
+#canvas image:nth-of-type(2n) {
+  transform: rotateZ(-15deg);
+}
+#canvas image:nth-of-type(3n) {
+  transform: rotateZ(30deg);
+}
+#canvas image:nth-of-type(5n) {
+  transform: rotateZ(20deg);
+}
 
 .cursor {
   z-index: 1;
