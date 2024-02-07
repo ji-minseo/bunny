@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans+TC&family=Oi&family=Rubik+Puddles&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style/style.css">
+    <title>bunny!</title>
+</head>
+<body class="sunny">
+    <div class="cursor"></div>
+    <section class="poster background sunny">
+
+    </section>
+
+    <section class="title">
+        <h1>the weather</h1>
+        <h2>stickers!</h2>
+    </section>
+    <section class="contents">
+        <div>
+            <p class="latitude">
+                14:00 03/10/2024
+            </p>
+            <p class="longitude">
+                Mapo-gu, Seoul
+            </p>
+        </div>
+        <!-- <div class="calendar">
+            <div class="month">12</div>
+            <div>月</div>
+            <div class="day">31</div>
+            <div>日</div>
+        </div> -->
+        <div>
+            
+            <p class="time">
+                
+            </p>
+            <p class="location">
+                날씨에 따라 바뀌는 스티커 스탬프를 자유롭게 찍어 보세요!
+            </p>
+        </div>
+    </section>
+    <section class="poster forward">
+        <svg id="canvas" width="100%" viewBox="0 0 300 100" onclick="stamp(event)"></svg>
+
+    </section>
+    <!-- <div id="button-container">
+        <button onclick="currentStamp=1">Spongebob </button>
+        <button onclick="currentStamp=2">Patrick</button>
+      </div> -->
+    <script src="./js/index.js"></script>
+</body>
+</html>
