@@ -211,8 +211,14 @@ const success = (position) => {
         // descSection.innerText = description;
         document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
 
+        showPage()
+
       })
       .catch((error) => {
         alert(error);
       });
+  }
+
+  function showPage() {
+    document.querySelector(".video-loader").style.display = "none";
   }
