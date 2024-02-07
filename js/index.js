@@ -237,8 +237,14 @@ const success = (position) => {
 
   function makeDesc() {
     const clouds = `When the sky is cloudy, it's so full of clouds that you can't see the sun. A cloudy day isn't ideal for a trip to the beach, and a cloudy night isn't great for star gazing.`
+    const sunny = `Sunny means shining with bright sunlight, like a beautiful sunny Saturday at the beach. It can also mean cheerful, like your sunny, upbeat best friend.`
+    const rainy = `Rainy things are affected by rain in some way, like rainy weather or a rainy afternoon.`
+    const snowy = `Snowy things are covered with snow or resemble snow—like snowy rooftops in the winter or your grandpa's snowy beard that makes him look like Santa Claus.`
     document.querySelectorAll('.marquee span').forEach((el) => {
         if(weather == 'Clouds') el.innerHTML = clouds
+        else if(weather == 'Rain') el.innerHTML = rainy
+        else if(weather == 'Snow') el.innerHTML = snowy
+        else if(weather == 'Clear') el.innerHTML = sunny
     })
 
   }

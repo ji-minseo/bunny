@@ -230,7 +230,7 @@ svg {
         // top: 50%;
         // transform: translate(-50%, -50%);
         // position: absolute;
-        transform-origin: center center;
+        transform-origin: center;
         &:first-of-type {
             transform: rotateZ(20deg);
         }
