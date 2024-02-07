@@ -202,6 +202,16 @@ svg {
   pointer-events: none;
   background: url("") center center/contain no-repeat;
 }
+@media screen and (max-width: 1023px) {
+  .cursor {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cursor {
+    display: none;
+  }
+}
 
 .video-loader {
   display: flex;

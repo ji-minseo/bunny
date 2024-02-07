@@ -217,6 +217,13 @@ svg {
     height: toVw(100px);
     pointer-events: none;
     background: url('') center center/contain no-repeat;
+    @media screen and (max-width : $breakpoint-tablet) {
+        display: none;
+    }
+    @media screen and (max-width : $breakpoint-mobile) {
+        display: none;
+
+    }
   }
 
   .video-loader {
