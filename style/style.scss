@@ -288,7 +288,7 @@ svg {
     flex-direction: column;
     // background: url('../img/bg.png') center center/cover no-repeat;
     // background: #E9FFFC;
-
+    background: #fff;
     img {
         width: toEm(200px);
         display: block;
@@ -313,10 +313,10 @@ svg {
   
   @keyframes animloader {
     0% {
-      box-shadow: -72px 0 #FFF inset;
+      box-shadow: -72px 0 #000 inset;
     }
     100% {
-      box-shadow: 48px 0 #FFF inset;
+      box-shadow: 48px 0 #000 inset;
     }
   }
 .marquee {

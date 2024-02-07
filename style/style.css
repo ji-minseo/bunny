@@ -263,6 +263,7 @@ svg {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: #fff;
 }
 .video-loader img {
   width: 12.5em;
@@ -288,10 +289,10 @@ svg {
 
 @keyframes animloader {
   0% {
-    box-shadow: -72px 0 #FFF inset;
+    box-shadow: -72px 0 #000 inset;
   }
   100% {
-    box-shadow: 48px 0 #FFF inset;
+    box-shadow: 48px 0 #000 inset;
   }
 }
 .marquee {
