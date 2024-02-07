@@ -271,12 +271,14 @@ svg {
   position: fixed;
   left: 0;
   top: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-size: max(1.0416666667vw, 20px);
   line-height: 1.5;
   height: max(2.0833333333vw, 40px);
   width: 100vw;
+  box-shadow: inset 16px 16px 26px rgba(0, 0, 0, 0.25);
+  border-bottom: 1px solid #000;
 }
 .marquee .inner {
   display: flex;
