@@ -9,39 +9,44 @@ window.mobileCheck = function() {
 function stamp1(x, y) {
   
   if(window.mobileCheck()) makeImage(`../img/${weather}1.png`,x,y, 300, 300, 1)
-  else makeImage(`../img/${weather}1.png`,x,y, 100, 100, 1)
+  else makeImage(`../img/${weather}1.png`,x,y, 80, 80, 1)
 }
 
 function stamp2(x, y) {
     if(window.mobileCheck()) makeImage(`../img/${weather}2.png`,x,y, 300, 300, 1)
-    else makeImage(`../img/${weather}2.png`,x,y, 100, 100, 1)
+    else makeImage(`../img/${weather}2.png`,x,y, 80, 80, 1)
 }
 
 function stamp3(x, y) {
     if(window.mobileCheck()) makeImage(`../img/${weather}3.png`,x,y, 300, 300, 1)
-    else makeImage(`../img/${weather}3.png`,x,y, 100, 100, 1)
+    else makeImage(`../img/${weather}3.png`,x,y, 80, 80, 1)
   }
 
   function stamp4(x, y) {
   
     if(window.mobileCheck()) makeImage(`../img/${weather}4.png`,x,y, 300, 300, 1)
-    else makeImage(`../img/${weather}4.png`,x,y, 100, 100, 1)
+    else makeImage(`../img/${weather}4.png`,x,y, 80, 80, 1)
   }
   
   function stamp5(x, y) {
       if(window.mobileCheck()) makeImage(`../img/${weather}5.png`,x,y, 300, 300, 1)
-      else makeImage(`../img/${weather}5.png`,x,y, 100, 100, 1)
+      else makeImage(`../img/${weather}5.png`,x,y, 80, 80, 1)
   }
   
   function stamp6(x, y) {
       if(window.mobileCheck()) makeImage(`../img/${weather}6.png`,x,y, 300, 300, 1)
-      else makeImage(`../img/${weather}6.png`,x,y, 100, 100, 1)
+      else makeImage(`../img/${weather}6.png`,x,y, 80, 80, 1)
     }
 
      
   function stamp7(x, y) {
     if(window.mobileCheck()) makeImage(`../img/${weather}7.png`,x,y, 300, 300, 1)
-    else makeImage(`../img/${weather}7.png`,x,y, 100, 100, 1)
+    else makeImage(`../img/${weather}7.png`,x,y, 80, 80, 1)
+  }
+
+  function stamp8(x, y) {
+    if(window.mobileCheck()) makeImage(`../img/${weather}8.png`,x,y, 300, 300, 1)
+    else makeImage(`../img/${weather}8.png`,x,y, 80, 80, 1)
   }
 
 // This function is called whenever the mouse is clicked on the canvas.
@@ -89,15 +94,22 @@ stamp1(xCoord, yCoord)
       document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}6.png')`
   
     }
-    // else if (currentStamp == 6) {
-    //   // CALL your second function here, passing in xCoord and yCoord for the parameters!
-    //   stamp6(xCoord, yCoord)
-    //   currentStamp++
-    //   document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}7.png')`
+    else if (currentStamp == 6) {
+      // CALL your second function here, passing in xCoord and yCoord for the parameters!
+      stamp6(xCoord, yCoord)
+      currentStamp++
+      document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}7.png')`
   
-    // }
+    }
+    else if (currentStamp == 7) {
+      // CALL your second function here, passing in xCoord and yCoord for the parameters!
+      stamp7(xCoord, yCoord)
+      currentStamp++
+      document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}8.png')`
+  
+    }
   else {
-    stamp7(xCoord, yCoord)
+    stamp8(xCoord, yCoord)
     currentStamp = 1
     document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
 
@@ -269,7 +281,7 @@ const success = (position) => {
 
         //Rain, Snow, Clouds, Thunderstorm, Drizzle, Atmosphere, Clear
         weather = json.weather[0].main;
-        document.querySelector('.longitude').innerText = place +' '+ lat +' '+ lon;
+        document.querySelector('.longitude').innerText = place;
         // descSection.innerText = description;
         weather = 'Clouds'
         document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
