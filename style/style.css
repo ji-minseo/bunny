@@ -265,6 +265,7 @@ svg {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background: #E2E2E2;
 }
 .video-loader img {
   width: 12.5em;
