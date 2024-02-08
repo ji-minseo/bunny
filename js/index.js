@@ -9,39 +9,39 @@ window.mobileCheck = function() {
 function stamp1(x, y) {
   
   if(window.mobileCheck()) makeImage(`../img/${weather}1.png`,x,y, 300, 300, 1)
-  else makeImage(`../img/${weather}1.png`,x,y, 80, 80, 1)
+  else makeImage(`../img/${weather}1.png`,x,y, 100, 100, 1)
 }
 
 function stamp2(x, y) {
     if(window.mobileCheck()) makeImage(`../img/${weather}2.png`,x,y, 300, 300, 1)
-    else makeImage(`../img/${weather}2.png`,x,y, 80, 80, 1)
+    else makeImage(`../img/${weather}2.png`,x,y, 100, 100, 1)
 }
 
 function stamp3(x, y) {
     if(window.mobileCheck()) makeImage(`../img/${weather}3.png`,x,y, 300, 300, 1)
-    else makeImage(`../img/${weather}3.png`,x,y, 80, 80, 1)
+    else makeImage(`../img/${weather}3.png`,x,y, 100, 100, 1)
   }
 
   function stamp4(x, y) {
   
     if(window.mobileCheck()) makeImage(`../img/${weather}4.png`,x,y, 300, 300, 1)
-    else makeImage(`../img/${weather}4.png`,x,y, 80, 80, 1)
+    else makeImage(`../img/${weather}4.png`,x,y, 100, 100, 1)
   }
   
   function stamp5(x, y) {
       if(window.mobileCheck()) makeImage(`../img/${weather}5.png`,x,y, 300, 300, 1)
-      else makeImage(`../img/${weather}5.png`,x,y, 80, 80, 1)
+      else makeImage(`../img/${weather}5.png`,x,y, 100, 100, 1)
   }
   
   function stamp6(x, y) {
       if(window.mobileCheck()) makeImage(`../img/${weather}6.png`,x,y, 300, 300, 1)
-      else makeImage(`../img/${weather}6.png`,x,y, 80, 80, 1)
+      else makeImage(`../img/${weather}6.png`,x,y, 100, 100, 1)
     }
 
      
   function stamp7(x, y) {
     if(window.mobileCheck()) makeImage(`../img/${weather}7.png`,x,y, 300, 300, 1)
-    else makeImage(`../img/${weather}7.png`,x,y, 80, 80, 1)
+    else makeImage(`../img/${weather}7.png`,x,y, 100, 100, 1)
   }
 
 // This function is called whenever the mouse is clicked on the canvas.
