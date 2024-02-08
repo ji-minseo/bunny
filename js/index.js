@@ -89,13 +89,13 @@ stamp1(xCoord, yCoord)
       document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}6.png')`
   
     }
-    // else if (currentStamp == 6) {
-    //   // CALL your second function here, passing in xCoord and yCoord for the parameters!
-    //   stamp6(xCoord, yCoord)
-    //   currentStamp++
-    //   document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}7.png')`
+    else if (currentStamp == 6) {
+      // CALL your second function here, passing in xCoord and yCoord for the parameters!
+      stamp6(xCoord, yCoord)
+      currentStamp++
+      document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}7.png')`
   
-    // }
+    }
   else {
     stamp7(xCoord, yCoord)
     currentStamp = 1
