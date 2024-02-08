@@ -271,7 +271,7 @@ const success = (position) => {
         weather = json.weather[0].main;
         document.querySelector('.longitude').innerText = place +' '+ lat +' '+ lon;
         // descSection.innerText = description;
-        if(weather == 'Mist') weather = 'Clouds'
+        weather = 'Clouds'
         document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
         makeDesc()
         showPage()
