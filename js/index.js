@@ -44,6 +44,11 @@ function stamp3(x, y) {
     else makeImage(`../img/${weather}7.png`,x,y, 80, 80, 1)
   }
 
+  function stamp8(x, y) {
+    if(window.mobileCheck()) makeImage(`../img/${weather}8.png`,x,y, 300, 300, 1)
+    else makeImage(`../img/${weather}8.png`,x,y, 80, 80, 1)
+  }
+
 // This function is called whenever the mouse is clicked on the canvas.
 // It figures out the x and y coordinates of where the mouse was clicked, and stores them in the variables xCoord and yCoord.
 // No need to change the code that's already here, but you will need to CALL your stamp functions where it's commented below!
@@ -96,8 +101,15 @@ stamp1(xCoord, yCoord)
       document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}7.png')`
   
     }
+    else if (currentStamp == 7) {
+      // CALL your second function here, passing in xCoord and yCoord for the parameters!
+      stamp7(xCoord, yCoord)
+      currentStamp++
+      document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}8.png')`
+  
+    }
   else {
-    stamp7(xCoord, yCoord)
+    stamp8(xCoord, yCoord)
     currentStamp = 1
     document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
 
