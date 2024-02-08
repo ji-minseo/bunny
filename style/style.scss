@@ -50,7 +50,7 @@ html {
     position: fixed;
     width: 100%;
     padding: 0 $margin;
-    color: #fff;
+    color: #000;
     @media screen and (max-width : $breakpoint-mobile) {
         padding: 0 10px;
 
@@ -69,7 +69,6 @@ html {
 
         }
     h1, h2 {
-        color: #fff!important;
         font-weight: 400;
         text-align: center;
     }
@@ -163,8 +162,7 @@ html {
         background: url('../img/bg.png') center center/cover no-repeat;
         // background: #E2E2E2;
         color: #000;
-        background: #000;
-    color: #fff;
+        
         &::after {
             display: block;
             content: '';
@@ -294,8 +292,7 @@ svg {
     background: url('../img/bg.png') center center/cover no-repeat;
     // background: #E9FFFC;
     // background: #E2E2E2;
-    background: #000;
-    color: #fff;
+
     img {
         width: toEm(200px);
         display: block;
