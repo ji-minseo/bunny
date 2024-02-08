@@ -269,7 +269,7 @@ const success = (position) => {
 
         //Rain, Snow, Clouds, Thunderstorm, Drizzle, Atmosphere, Clear
         weather = json.weather[0].main;
-        document.querySelector('.longitude').innerText = place +' '+ lat +' '+ lon;
+        document.querySelector('.longitude').innerText = place +'-Gu, Seoul, Korea.';
         // descSection.innerText = description;
         weather = 'Clouds'
         document.querySelector('.cursor').style.backgroundImage = `url('../img/${weather}1.png')`
